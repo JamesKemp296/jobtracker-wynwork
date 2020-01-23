@@ -7,7 +7,7 @@
 <table class="table">
   <thead>
     <tr scope="col" >
-      
+
       <th scope="col" >Date Applied</th>
       <th scope="col" >Company</th>
       <th scope="col" >Position</th>
@@ -20,12 +20,12 @@
   <tbody>
     <% @jobs.each do |job| %>
       <tr>
-        
+
         <td class="fontz" ><%= job.created_at.to_formatted_s(:short) %></td>
         <td class="fontz" ><%= job.company %></td>
         <td class="fontz" ><%= job.position %></td>
         <td class="fontz" ><%= job.status %></td>
-        <td class="fontz" ><a href="<%= job.link %>" target="_blank" rel="noopener noreferrer"><%= job.link %></a></td>
+        <td class="fontz" ><a href="<%= job.link %>" target="_blank" rel="noopener noreferrer">Link to job</a></td>
         <td class="fontz" ><%= link_to 'Show', job, class:"blue" %></td>
         <td class="fontz" ><%= link_to 'Edit', edit_job_path(job) %></td>
         <td class="fontz" ><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
